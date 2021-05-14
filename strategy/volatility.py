@@ -98,8 +98,8 @@ class VolatilityStrategy(Strategy):
 				logger.info('{:>30s}: {}'.format('previous range', self.context.range))
 				logger.info('{:>30s}: {}'.format('minimum price', self.context.minimum_price))
 				logger.info('{:>30s}: {}'.format('target price', self.context.target_price))
-				logger.info('[ BUY] | {} | {}'.format(investment.ticker.code, self.context.buying_price))
-				logger.info('[SELL] | {} | {}'.format(investment.ticker.code, self.context.selling_price))
+				logger.info('{} |  BUY | {}'.format(investment.ticker.code, self.context.buying_price))
+				logger.info('{} | SELL | {}'.format(investment.ticker.code, self.context.selling_price))
 
 	def on_buy(self, ticker, price):
 		self.context.buying_price = price
