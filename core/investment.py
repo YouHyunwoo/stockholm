@@ -26,6 +26,8 @@ class Investment:
         self.strategy.add_event_listener('buy', self.trader)
         self.strategy.add_event_listener('sell', self.trader)
 
+        logger.info('{:>4s} | {}'.format(self.ticker.code, datetime.datetime.now()))
+
     def update(self):
         self.get_current_time()
         self.get_current_price()

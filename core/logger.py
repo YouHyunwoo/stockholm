@@ -1,5 +1,4 @@
 import os
-import datetime
 
 from colorama import Fore, Back, Style
 
@@ -94,10 +93,6 @@ class Logger:
 
         os.makedirs(os.path.dirname(file), exist_ok=True)
         self.file_io = None if file is None else open(file, 'a')
-
-        if self.file_io is not None:
-            now = datetime.datetime.now()
-            self.file_io.write('\n\n\nstart logging: {}\n'.format(now))
 
     def close(self):
         self.file_io.close()
